@@ -1,31 +1,43 @@
-import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
 
-export default function TabTwoScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
-    </View>
-  );
+/** == [ @imports ] 
+ * == == == == == == == == == */
+import React, { useState, useEffect } from "react";
+import { 
+   StyleSheet,
+   View,
+   Text, 
+} from "react-native";
+
+import { Page, } from "@/widgets/ui";
+
+
+/** == [ properties ]
+ * == == == == == == == == == */
+
+
+/** == [ exports ]
+ * == == == == == == == == == */
+export default function TwoView( { ...props } ) {
+
+
+   return( <>
+      <Page>
+         <Text style={{ color: "#eee", fontWeight: "bold", }}>Two</Text>
+      </Page>
+   </> );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
+
+/** == [ StyleSheet ]
+ * == == == == == == == == == */
+const 
+   s = StyleSheet.create( {
+      sheet: {
+         flex: 1,
+         alignItems: "center",
+         justifyContent: "center",
+         backgroundColor: "#27f0",
+      },
+   } )
+;

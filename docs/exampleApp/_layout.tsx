@@ -2,7 +2,6 @@
 
 import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { Link, Tabs } from 'expo-router';
 import { Pressable, Text, View } from 'react-native';
 
@@ -40,9 +39,8 @@ export default function TabLayout() {
          <Tabs.Screen
          name="index"
          options={ {
-            title: "Home",
-            // tabBarIcon: ( { color } ) => <TabBarIcon name="broadcast-on-home" color={ color } />,
-            tabBarIcon: ( { color } ) => <MaterialIcons name="broadcast-on-home" size={24} color="#888" />,
+            title: 'Tab One',
+            tabBarIcon: ( { color } ) => <TabBarIcon name="code" color={ color } />,
             headerRight: () => (
                <Link href="/modal" asChild>
                   <Pressable onPress={ () => alert( "oi" ) }>

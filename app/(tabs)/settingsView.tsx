@@ -9,6 +9,8 @@ import {
    Text, 
 } from "react-native";
 
+import { Page, } from "@/widgets/ui";
+
 
 /** == [ properties ]
  * == == == == == == == == == */
@@ -16,13 +18,13 @@ import {
 
 /** == [ exports ]
  * == == == == == == == == == */
-export default function App( { ...props } ) {
+export default function SettingsView( { ...props } ) {
 
 
    return( <>
-      <View style={[ s.sheet ]}>
-         <Text>Céo</Text>
-      </View>
+      <Page>
+         <Text style={{ color: "#eee", fontWeight: "bold", }}>Settings</Text>
+      </Page>
    </> );
 }
 
@@ -35,6 +37,7 @@ const
          flex: 1,
          alignItems: "center",
          justifyContent: "center",
+         backgroundColor: "#27f0",
       },
    } )
 ;
