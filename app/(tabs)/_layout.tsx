@@ -74,7 +74,14 @@ export default function TabLayout() {
          name="two"
          options={ {
             title: 'Tab Two',
-            tabBarIcon: ( { color } ) => <TabBarIcon name="code" color={ color = "#888" } />,
+            tabBarIcon: ( { color, focused } ) => {
+               if( focused ) {
+                  return <TabBarIcon name="code" color={ color = "#27f" } />
+               } else {
+                  return <TabBarIcon name="sticky-note-o" color={ color = "#888" } />
+               }
+            },
+            tabBarBackground: () => <View style={{ backgroundColor: "#27f", width: 50, height: 50 }}/>
          } }
          />
 
